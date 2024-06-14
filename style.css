@@ -1,0 +1,123 @@
+::selection {
+  background: #a9d4ff;
+}
+
+body {
+  background: rgb(226, 226, 226);
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  margin: 100px auto;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #4e4e4e;
+}
+
+.todo-list-title {
+  margin-top: 10px;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.input-wrapper {
+  border-radius: 10px;
+  background: #dfdfdf;
+  margin: 0 auto;
+  width: 100%;
+  /* padding: 5px; */
+  display: flex;
+  justify-content: space-between;
+  transition-duration: 100ms;
+}
+
+.input-wrapper:hover {
+  scale: 1.015;
+}
+
+.input-wrapper input {
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+  flex: 1;
+  padding: 10px 10px;
+}
+
+.input-wrapper button {
+  background-color: rgb(33, 147, 223);
+  border: 0px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.input-wrapper button:hover {
+  background-color: rgb(19, 160, 255);
+}
+
+.input-wrapper button:active {
+  background-color: rgb(20, 127, 199);
+}
+
+.list {
+  list-style: none;
+  padding: 0px;
+}
+
+.list li {
+  vertical-align: middle;
+  font-weight: 400;
+  padding: 5px;
+  position: relative;
+}
+
+.list li.checked {
+  text-decoration: line-through;
+}
+
+.list li::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(assets/checkbox.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.list li.checked::before {
+  background-image: url(assets/checked.svg);
+}
+
+.delete {
+  background-image: url(assets/cross.svg);
+  border-radius: 20px;
+  padding: 5px;
+  background-position: center;
+  object-fit: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  transition-duration: 150ms;
+}
+
+.delete:hover {
+  background-color: #eeeff0;
+  cursor: pointer;
+}
